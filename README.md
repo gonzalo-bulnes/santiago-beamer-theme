@@ -11,5 +11,5 @@ Santiago is based on [Torino](http://blog.barisione.org/2007-09/torino-a-pretty-
   2. You can then use the theme for your presentations by declaring it in your main `.tex` file.
 
     ```LaTeX
-    \usetheme[pageofpages=of,titlepagelogo=yourtitleframelogoname]{Santiago}``` 
-
+    \usetheme[pageofpages=of,titlepagelogo=yourtitleframelogoname]{Santiago}
+    ``` 

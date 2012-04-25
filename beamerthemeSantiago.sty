@@ -1,0 +1,254 @@
+%% beamerthemeSantiago.sty
+%
+% Copyright (C) 2012 Gonzalo Bulnes Guilpain
+% This beamer theme is based on the work of
+% Till Tantau (Warsaw theme) and Marco Barisione (Torino theme).
+%
+% Copyright (C) 2007 Marco Barisione
+% Copyright (C) 2007 Till Tantau
+%
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License
+% See the below for more details.
+%%
+
+%% LaTeX Project Public License disclaimer:
+%
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This file has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is:
+% Gonzalo Bulnes Guilpain <gon.bulnes@gmail.com>
+%%
+
+%% GNU General Public License disclaimer:
+%
+%  This file is free software: you can redistribute it and/or modify
+%  it under the terms of the GNU General Public License as published by
+%  the Free Software Foundation, either version 3 of the License, or
+%  (at your option) any later version.
+%
+%  This file is distributed in the hope that it will be useful,
+%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%  GNU General Public License for more details.
+%
+%  You should have received a copy of the GNU General Public License
+%  along with this fie.  If not, see <http://www.gnu.org/licenses/>.
+%%
+
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Options
+%
+% The following options can be set when using the theme from example.tex
+% Usage: \usetheme[alternativetitlepage=false,pageofpages=of]{Santiago}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Logo to use in the alternative title page.
+\def\beamer@santiago@titlepagelogo{}
+\DeclareOptionBeamer{titlepagelogo}{\def\beamer@santiago@titlepagelogo{#1}}
+
+% String used between the current page and the total page count.
+\def\beamer@santiago@pageofpages{/}
+\DeclareOptionBeamer{pageofpages}{\def\beamer@santiago@pageofpages{#1}}
+
+\ProcessOptionsBeamer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Themes
+%
+% The following option can be overridden when using the theme from your.tex
+% Usage: \useinnertheme{orchid}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\useoutertheme{split}
+%\useinnertheme{santiago}
+%\useoutertheme{santiago}
+%\usecolortheme{santiago}
+
+% Uncomment to disable the navigation symbols.
+\setbeamertemplate{navigation symbols}{}
+
+%\setbeamertemplate{blocks}[rounded]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{indigo}{RGB}{32,176,176}
+\definecolor{pearl}{RGB}{224,219,210}
+\definecolor{darkgrey}{RGB}{138,137,137}
+\definecolor{red}{RGB}{221,0,0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors usage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor*{palette primary}{fg=black,bg=indigo}
+\setbeamercolor*{palette secondary}{fg=black,bg=pearl}
+\setbeamercolor*{palette tertiary}{fg=pearl,bg=indigo}
+\setbeamercolor*{palette quaternary}{fg=black,bg=white}
+
+\setbeamercolor{normal text}{parent=title}
+
+% Change the title and subtitle colors to modify the other elements.
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{subtitle}{fg=indigo!80!black}
+
+\setbeamercolor{author}{parent=palette tertiary}
+\setbeamercolor{institute}{parent=palette tertiary}
+\setbeamercolor{date}{parent=palette tertiary}
+
+\setbeamercolor{frametitle}{parent=subtitle}
+
+\setbeamercolor{part title}{parent=subtitle}
+\setbeamercolor{section in toc}{parent=subtitle}
+\setbeamercolor{section in toc shaded}{parent=subtitle}
+
+\setbeamercolor{section in head/foot}{parent=palette secondary}
+\setbeamercolor{subsection in head/foot}{parent=palette primary}
+
+\setbeamercolor{author in head/foot}{parent=section in head/foot}
+\setbeamercolor{title in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{pages in head/foot}{parent=subsection in head/foot}
+
+\setbeamercolor{item}{parent=subtitle}
+\setbeamercolor{subitem}{parent=subtitle}
+\setbeamercolor{subsubitem}{parent=subtitle}
+
+\setbeamercolor{description item}{parent=subtitle}
+
+\setbeamercolor{caption}{parent=title}
+\setbeamercolor{caption name}{parent=title}
+
+\setbeamercolor{block title}{parent=subtitle}
+%\setbeamercolor{block body}{bg=pearl}
+
+\setbeamercolor{block title alerted}{fg=red}
+%\setbeamercolor{block body alerted}{bg=pearl}
+
+%\setbeamercolor{block title example}{fg=pearl,bg=green}
+%\setbeamercolor{block body example}{bg=pearl}
+
+\setbeamercolor{normal text}{parent=title}
+\setbeamercolor{alerted text}{fg=red}
+\setbeamercolor{example text}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+% Based on and overrides beamerinnerthemedefault.sty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{title page}{santiago theme}[1][]
+{
+  \vbox{}
+  \vfill
+  \vspace{5mm}
+  \begin{centering}
+    \begin{beamercolorbox}[wd=128mm,sep=8pt,center,#1]{}
+      \usebeamerfont{title}\inserttitle\par
+      \ifx\insertsubtitle\@empty
+      \else
+        \vskip0.25em
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+      \fi
+      \ifx\inserttitlegraphic\@empty\else
+        \vspace{1mm}
+        {\usebeamercolor[fg]{titlegraphic}\small{\inserttitlegraphic}\par}
+      \fi
+    \end{beamercolorbox}
+  \end{centering}
+  \vfill
+  %\ifx\insertsubtitle\@empty
+  \ifx\inserttitlegraphic\@empty
+    \vspace{1cm}
+  \else\fi
+  \begin{columns}
+      %\ifx\beamer@fancy@titlepagelogo\@empty%
+      %    \column{\textwidth}
+      %\else
+          \column{.5\paperwidth}
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette secondary}
+              \begin{centering}
+                  \vbox{}\vfill
+                    % Logo
+                    \begin{centering}
+                        \vbox{}\vfill
+                        \includegraphics[width=.35\paperwidth]{\beamer@santiago@titlepagelogo}
+                        \vskip.7em % FIXME Center vertically
+                        \vfill
+                    \end{centering}
+                  \vfill
+              \end{centering}
+            \end{beamercolorbox}
+          \column{.5\paperwidth}
+      % \fi
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette primary}
+              % Authors, institute and date
+              \vskip.9em\par
+              \begin{beamercolorbox}[sep=3pt,center,#1]{author}
+                \usebeamerfont{author}\insertauthor
+              \end{beamercolorbox}
+              \begin{beamercolorbox}[sep=4pt,center,#1]{institute}
+                \usebeamerfont{institute}\insertinstitute
+              \end{beamercolorbox}
+              \begin{beamercolorbox}[sep=3pt,center,#1]{date}
+                \usebeamerfont{date}\insertdate
+              \end{beamercolorbox}\vskip.9em\vskip7pt % FIXME Several authors
+            \end{beamercolorbox}
+  \end{columns}
+  \vspace{-2cm}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Footline
+% Based on beamerouterthemedecolines.sty
+% Based on and overrides beamerouterthemesplit.sty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{footline}{santiago theme}
+{%
+  \leavevmode%
+  %%% Author
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor%
+  \end{beamercolorbox}%
+  %%% Short Title
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle%
+  \end{beamercolorbox}%
+  %%% Page of Pages
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1.125ex,center]{pages in head/foot}%
+    \usebeamerfont{pages in head/foot}\insertframenumber{} \beamer@santiago@pageofpages{} \inserttotalframenumber%
+  \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Itemize items
+% Based on beamerinnerthemefancy.sty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% No items styles defined.
+\defbeamertemplate{itemize item}{squarealt}%
+{\tiny\raise.5ex\hbox{\donotcoloroutermaths$\blacksquare$}}
+\defbeamertemplate{itemize subitem}{squarealt}%
+{\tiny\raise.4ex\hbox{\donotcoloroutermaths$\square$}}
+\defbeamertemplate{itemize subsubitem}{squarealt}%
+{\tiny\raise.3ex\hbox{\donotcoloroutermaths$\blacksquare$}}
+
+\setbeamertemplate{itemize items}[squarealt]
+
+\mode<all>
+% EOF

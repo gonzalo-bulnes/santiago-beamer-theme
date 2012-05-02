@@ -6,7 +6,8 @@ some documentation and example files.
 The theme itself is beamerthemeSantiago.sty file.
 It contains both credits and information about its own license.
 
+The files stored in the /vendor directory are propriety of their authors.
+The Robots Chile logo belongs to its authors.
+
 The other files are provided as an usage example, unless where
 otherwise noted, they are in the public domain.
-
-By the way, the Robots Chile logo belongs to its authors.

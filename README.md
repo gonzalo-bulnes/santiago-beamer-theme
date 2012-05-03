@@ -26,8 +26,10 @@ Copyright &copy; 2007 Marco Barisione<br/>
 Copyright &copy; 2007 Till Tantau
 
 The Santiago Beamer theme may be distributed and/or modified
+
   1. under the LaTeX Project Public License and/or
   2. under the GNU Public License
+
 See the [LICENSE] [2] file for details.
 
   [2]: https://github.com/gonzalo-bulnes/santiago-beamer-theme/blob/master/LICENSE

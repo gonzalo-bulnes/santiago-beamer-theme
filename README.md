@@ -3,7 +3,9 @@ Santiago
 
 A nice theme for the LaTeX Beamer class.
 
-Santiago is based on [Torino](http://blog.barisione.org/2007-09/torino-a-pretty-theme-for-latex-beamer/) by Marco Barisione and inspired in the Beamer built-in theme Warsaw to provide a dynamic table of contents.
+Santiago is based on [Torino] [1] by Marco Barisione and inspired in the Beamer built-in theme Warsaw to provide a dynamic table of contents.
+
+  [1]: http://blog.barisione.org/2007-09/torino-a-pretty-theme-for-latex-beamer/
 
 ## Usage
 
@@ -13,3 +15,21 @@ Santiago is based on [Torino](http://blog.barisione.org/2007-09/torino-a-pretty-
     ```LaTeX
     \usetheme[pageofpages=of,titlepagelogo=yourtitleframelogoname]{Santiago}
     ``` 
+
+## License
+
+Copyright &copy; 2012 Gonzalo Bulnes Guilpain
+This beamer theme is based on the work of
+Till Tantau (Warsaw theme) and Marco Barisione (Torino theme).
+
+Copyright &copy; 2007 Marco Barisione
+Copyright &copy; 2007 Till Tantau
+
+The Santiago Beamer theme may be distributed and/or modified
+
+  1. under the LaTeX Project Public License and/or
+  2. under the GNU Public License
+
+See the [LICENSE] [2] file for details.
+
+  [2]: https://github.com/gonzalo-bulnes/santiago-beamer-theme/blob/master/LICENSE

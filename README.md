@@ -1,5 +1,4 @@
-Santiago
-========
+<img src="https://gonzalobulnes.com/shared/santiago-branding.png" alt="Santiago" height="92" width="393" />
 
 A nice theme for the LaTeX Beamer class.
 

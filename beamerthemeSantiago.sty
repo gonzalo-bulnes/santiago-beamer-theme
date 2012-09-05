@@ -10,7 +10,9 @@
 % This file may be distributed and/or modified
 % 1. under the LaTeX Project Public License and/or
 % 2. under the GNU Public License
-% See the below for more details.
+% See the below for more details and
+% https://github.com/gonzalo-bulnes/santiago-beamer-theme
+% for the latest version.
 %%
 
 %% LaTeX Project Public License disclaimer:
@@ -174,38 +176,37 @@
     \vspace{1cm}
   \else\fi
   \begin{columns}
-      %\ifx\beamer@fancy@titlepagelogo\@empty%
-      %    \column{\textwidth}
-      %\else
-          \column{.5\paperwidth}
-            \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette secondary}
-              \begin{centering}
-                  \vbox{}\vfill
-                    % Logo
-                    \begin{centering}
-                        \vbox{}\vfill
-                        \includegraphics[width=.35\paperwidth]{\beamer@santiago@titlepagelogo}
-                        \vskip.7em % FIXME Center vertically
-                        \vfill
-                    \end{centering}
-                  \vfill
-              \end{centering}
-            \end{beamercolorbox}
-          \column{.5\paperwidth}
-      % \fi
-            \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette primary}
-              % Authors, institute and date
-              \vskip.9em\par
-              \begin{beamercolorbox}[sep=3pt,center,#1]{author}
-                \usebeamerfont{author}\insertauthor
-              \end{beamercolorbox}
-              \begin{beamercolorbox}[sep=4pt,center,#1]{institute}
-                \usebeamerfont{institute}\insertinstitute
-              \end{beamercolorbox}
-              \begin{beamercolorbox}[sep=3pt,center,#1]{date}
-                \usebeamerfont{date}\insertdate
-              \end{beamercolorbox}\vskip.9em\vskip7pt % FIXME Several authors
-            \end{beamercolorbox}
+    \column{.5\paperwidth}
+      \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette secondary}
+        \ifx\beamer@santiago@titlepagelogo\@empty%
+        \else
+          \begin{centering}
+            \vbox{}\vfill
+            % Logo
+            \begin{centering}
+              \vbox{}\vfill
+              \includegraphics[width=.35\paperwidth]{\beamer@santiago@titlepagelogo}
+              \vskip.7em % FIXME Center vertically
+              \vfill
+            \end{centering}
+            \vfill
+          \end{centering}
+        \fi
+      \end{beamercolorbox}
+    \column{.5\paperwidth}
+      \begin{beamercolorbox}[wd=.5\paperwidth,ht=.3\paperheight,dp=0pt]{palette primary}
+        % Authors, institute and date
+        \vskip.9em\par
+        \begin{beamercolorbox}[sep=3pt,center,#1]{author}
+          \usebeamerfont{author}\insertauthor
+        \end{beamercolorbox}
+        \begin{beamercolorbox}[sep=4pt,center,#1]{institute}
+          \usebeamerfont{institute}\insertinstitute
+        \end{beamercolorbox}
+        \begin{beamercolorbox}[sep=3pt,center,#1]{date}
+          \usebeamerfont{date}\insertdate
+        \end{beamercolorbox}\vskip.9em\vskip7pt % FIXME Several authors
+      \end{beamercolorbox}
   \end{columns}
   \vspace{-2cm}
 }

@@ -25,3 +25,11 @@ jekyll --server
 ```
 
 You server is up at [http://localhost:4000](http://localhost:4000).
+
+Credits
+-------
+
+The [Santiago Beamer theme][santiago] Github pages use [Font Awesome][font-awesome]!
+
+  [santiago]: http://gonzalo-bulnes.github.com/santiago-beamer-theme
+  [font-awesome]: http://fortawesome.github.com/Font-Awesome

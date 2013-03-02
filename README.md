@@ -1,0 +1,35 @@
+Santiago Beamer Theme Github Pages
+==================================
+
+Getting Started
+---------------
+
+Get a local copy of the `gh-pages` branch:
+
+```bash
+cd santiago-beamer-theme
+git checkout gh-pages
+```
+
+In order to get a development server up quickly, installing the [Jekyll][jekyll] gem is required. To avoid messing up with you system gems, I use [RVM][rvm]; and to never forget a dependency, I recommend using [Bundler][bundler]. That's much more easy than it seems:
+
+```
+# Let RVM create a gemset for you
+cd . # RVM will ask you if you want to trust the .rvmrc, answer: Y(es)
+
+# Install Jekyll with Bundler
+bundle install
+
+# Start the Jekyll server
+jekyll --server
+```
+
+You server is up at [http://localhost:4000](http://localhost:4000).
+
+Credits
+-------
+
+The [Santiago Beamer theme][santiago] Github pages use [Font Awesome][font-awesome]!
+
+  [santiago]: http://gonzalo-bulnes.github.com/santiago-beamer-theme
+  [font-awesome]: http://fortawesome.github.com/Font-Awesome

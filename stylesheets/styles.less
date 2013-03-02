@@ -1,0 +1,88 @@
+@import 'bootstrap.min.css';
+@import 'bootstrap-responsive.min.css';
+@import 'font-awesome.min.css';
+
+// Make the Bootstrap variables available
+@import 'bootstrap/variables.less';
+
+// Variables ////
+
+@iconWhiteSpritePath: '../images/glyphicons-halflings-white.png';
+@iconSpritePath: '../images/glyphicons-halflings.png';
+
+// Mixins ////
+
+.soft-hidden {
+  position: absolute;
+  left: -99999px;
+}
+
+.no-soft-hidden {
+  position: relative;
+  left: auto;
+}
+
+.santiago-branding {
+  // image size: 393x92;
+  background-image: url('../images/santiago-branding.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+// Styles ////
+
+body {
+  // required by .navbar.navbar-fixed-top
+  padding-top: 40px;
+}
+
+@media (max-width: 979px) {
+  body {
+    // reset by .navbar.navbar-fixed-top fix when being responsive
+    padding-top: 0;
+  }
+}
+
+// Specific styles for the index page
+#index {
+
+  // Hero-unit with background-image
+  .hero-unit.custom-hero-unit {
+    .custom-hero-unit-inner {
+      .santiago-branding;
+      border-top: 1px solid transparent; // force margin-top of fisrt-child to be applied
+      padding-top: 103px; // background-height + 20px
+      h1 {
+        .soft-hidden;
+      }
+    }
+  }
+}
+
+// Disable the hero-unit with background-image on narrow screens
+@media (max-width: 979px) {
+  #index {
+    .hero-unit.custom-hero-unit {
+      .custom-hero-unit-inner {
+        background-image: none;
+        padding-left: 0;
+        h1 {
+          .no-soft-hidden;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#footer {
+  background-color: #F5F5F5;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 70px;
+  padding: 30px 0;
+}
+
+// Spacings
+article {
+  margin: 1em;
+}

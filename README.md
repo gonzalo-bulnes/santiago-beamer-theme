@@ -13,7 +13,13 @@ Santiago is based on [Torino] [1] by Marco Barisione and inspired in the Beamer 
 
     ```LaTeX
     \usetheme[pageofpages=of,titlepagelogo=yourtitleframelogoname]{Santiago}
-    ``` 
+    ```
+
+## Examples
+
+Want to see the Santiago theme in action? See the [Free Software to Devlop Free Robotics slides][example] at Speaker Deck!
+
+  [example]: https://speakerdeck.com/gonzalobulnes/free-software-to-develop-free-robotics
 
 ## License
 
